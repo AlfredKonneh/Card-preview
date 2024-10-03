@@ -1,0 +1,138 @@
+:root {
+  --color-bright-orange: hsl(31, 77%, 52%);
+  --color-dark-cyan: hsl(184, 100%, 22%);
+  --color-very-dark-cyan: hsl(179, 100%, 13%);
+  --color-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --color-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  /* margin: 0; */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--color-paragraphs);
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  color: var(--color-background-headings-buttons);
+  margin-block: 1rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+/* carts */
+.card {
+  padding: 3.4rem;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.card__image {
+  width: 100%;
+  max-width: 60px;
+}
+
+.card__name {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.card--orange {
+  background: var(--color-bright-orange);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.card--orange .btn {
+  color: var(--color-bright-orange);
+}
+
+.card--dark-cyan {
+  background: var(--color-dark-cyan);
+}
+
+.card--dark-cyan .btn {
+  color: var(--color-dark-cyan);
+}
+.card--very-dark-cyan {
+  background: var(--color-very-dark-cyan);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.card--very-dark-cyan .btn {
+  color: var(--color-very-dark-cyan);
+}
+
+.btn {
+  font-size: 1.4rem;
+  background: var(--color-background-headings-buttons);
+  border: 2px solid transparent;
+  border-radius: 25px;
+  display: inline-block;
+  outline: none;
+  padding: 6px 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn:hover,
+.btn:focus {
+  background: transparent;
+  border-color: var(--color-background-headings-buttons);
+  color: var(--color-paragraphs);
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    font-size: 1.8rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+
+  .card {
+    padding: 3.1rem;
+    max-width: 305px;
+  }
+
+  .card--orange {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 7px;
+  }
+
+  .card--very-dark-cyan {
+    background: var(--color-very-dark-cyan);
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 0;
+  }
+
+  .btn {
+    margin-top: 3rem;
+  }
+}
